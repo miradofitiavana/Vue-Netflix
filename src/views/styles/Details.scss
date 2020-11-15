@@ -1,0 +1,48 @@
+.similar-item {
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    .block-description {
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    &:hover {
+        .block-images {
+            transform: scale3d(1.3, 1.3, 1) translate3d(11%, 0, 0) perspective(500px);
+
+            @media (max-width: 768px) {
+                transform: none;
+            }
+
+            .block-description {
+                @media (max-width: 768px) {
+                    display: none !important;
+                }
+            }
+        }
+
+        &:nth-child(4n+1) {
+            .block-images {
+                transform: scale3d(1.3, 1.3, 1) translate3d(11%, 0, 0) perspective(500px);
+            }
+        }
+
+        &:nth-child(4n) {
+            .block-images {
+                @media (min-width: 1200px) {
+                    transform: scale3d(1.3, 1.3, 1) translate3d(-12%, 0, 0) perspective(500px);
+                }
+            }
+        }
+
+        &:nth-child(3n) {
+            .block-images {
+                @media (max-width: 1199px) {
+                    transform: scale3d(1.3, 1.3, 1) translate3d(-12%, 0, 0) perspective(500px);
+                }
+            }
+        }
+    }
+}

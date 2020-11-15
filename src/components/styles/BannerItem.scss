@@ -1,0 +1,77 @@
+.slick-bg {
+    padding: 100px 0 50px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    transition: all .3s;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        // background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 1) 35%, rgba(83, 100, 141, 0) 100%);
+        background: linear-gradient(90deg, #000000c7 0%, #1414147a 15%, rgba(83, 100, 141, 0) 100%);
+        width: 100%;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background: linear-gradient(360deg, #232323e0 0%, #141414 0%, rgba(83, 100, 141, 0) 100%);
+        width: 100%;
+        z-index: -1;
+    }
+
+    .slider-inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        .channel-logo {
+            text-align: left;
+        }
+    }
+
+    p {
+        margin: 20px 0;
+        width: 75%;
+        text-align: left;
+        font-size: 20px;
+
+        @media (min-width:1499px) {
+            margin: 32px 0;
+        }
+
+        @media (max-width:767px) {
+            margin: 22px 0;
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}
+
+.c-logo {
+    width: 150px;
+}
+
+.vote {
+    border-radius: 0;
+    padding: 10px;
+    font-size: 18px;
+
+    >span {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
